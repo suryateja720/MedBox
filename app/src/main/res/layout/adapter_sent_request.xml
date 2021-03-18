@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTeal50">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="2dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/sent_request_adapter_request_to"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="2dp"
+                android:text="Request To"
+                android:textColor="@color/colorGrey600"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/sent_request_adapter_request_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/sent_request_adapter_cancel_button"
+                android:layout_toEndOf="@+id/sent_request_adapter_request_to"
+                android:ellipsize="end"
+
+                android:maxLines="1"
+                android:paddingHorizontal="10dp"
+                android:text="requested"
+                android:textColor="@color/colorGrey400"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/sent_request_adapter_cancel_button"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/form_gradient_teal"
+                android:elevation="8dp"
+                android:paddingHorizontal="20dp"
+                android:text="cancel"
+                android:textColor="@color/colorTeal600"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:paddingHorizontal="10dp"
+                android:visibility="visible"
+                android:id="@+id/sent_request_adapter_remove_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_close_grey_24dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

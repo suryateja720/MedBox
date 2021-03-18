@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/activity_user_dashboard">
+
+    <group
+        android:id="@+id/distributor_main_menu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_stock_billing"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Stock &amp; Billing" />
+        <item
+            android:id="@+id/nav_bill_payments"
+            android:icon="@drawable/ic_payment_black_24dp"
+            android:title="Bill &amp; Payments" />
+    </group>
+    <group
+        android:id="@id/distributor_creation_menu"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_retailers"
+            android:icon="@drawable/ic_card_membership_black_24dp"
+            android:title="Retailer" />
+        <item
+            android:id="@+id/nav_employee"
+            android:icon="@drawable/ic_people_outline_black_24dp"
+            android:title="Employees" />
+        <item
+            android:id="@+id/nav_company_products"
+            android:icon="@drawable/ic_business_black_24dp"
+            android:title="Companies &amp; Products" />
+
+    </group>
+
+    <!--    <item android:title="In the Medbox">-->
+    <group
+        android:checkableBehavior="single"
+        android:id="@+id/distributor_common_menu">
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings" />
+        <item
+            android:id="@+id/nav_help_feedback"
+            android:icon="@drawable/ic_help_outline_black_24dp"
+            android:title="Help &amp; feedback" />
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Log out" />
+
+    </group>
+
+</menu>

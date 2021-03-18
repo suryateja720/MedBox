@@ -1,0 +1,257 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorGrey100">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/company_adapter_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="2dp"
+        android:animateLayoutChanges="true"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+        <RelativeLayout
+            android:background="@color/colorGrey50"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                app:cardCornerRadius="10dp"
+                android:id="@+id/company_adapter_header"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/company_index_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@drawable/index_icon_circle"
+                        android:elevation="4dp"
+                        android:fontFamily="@font/eagle_lake"
+                        android:gravity="center"
+                        android:text="CN"
+                        android:textColor="@color/colorTeal400"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_toStartOf="@id/company_product_count_card_view"
+                        android:layout_toEndOf="@id/company_index_icon"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Company Name"
+                        android:textColor="@color/colorGrey700"
+                        android:textSize="14sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/company_product_count_card_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="30dp"
+                        android:layout_toStartOf="@id/company_image_drop_down"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="1dp">
+
+                        <TextView
+                            android:id="@+id/company_product_count"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorTeal300"
+                            android:gravity="center"
+                            android:text="10"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/company_image_drop_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:paddingHorizontal="10dp"
+                        android:src="@drawable/ic_arrow_drop_down_grey_24dp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <RelativeLayout
+                android:background="@color/colorGrey50"
+                android:id="@+id/company_adapter_products_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_adapter_header"
+                android:layout_marginHorizontal="10dp"
+                android:paddingTop="20dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/company_adapter_representative_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/form_gradient_grey"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="5dp"
+                    android:text="Representative Name"
+                    android:textColor="@color/colorGrey500"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/company_adapter_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/company_adapter_representative_name"
+                    android:background="@drawable/form_gradient_grey"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingHorizontal="30dp"
+                    android:paddingVertical="5dp"
+                    android:text="Email ID"
+                    android:textColor="@color/colorGrey500"
+                    android:textIsSelectable="true"
+                    android:textSize="12sp" />
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_below="@id/company_adapter_representative_name"
+                    android:id="@+id/company_adapter_products_title_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:alpha=".9"
+                        android:padding="5dp"
+                        android:textColor="@color/white"
+                        android:background="@color/colorTeal300"
+                        android:gravity="center"
+                        android:text="Products List"
+                        android:id="@+id/company_adapter_products_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </androidx.cardview.widget.CardView>
+                <RelativeLayout
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:id="@+id/company_adapter_products_header"
+                    android:layout_below="@id/company_adapter_products_title_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:textColor="@color/colorGrey500"
+                        android:textSize="13sp"
+                        android:id="@+id/company_adapter_product_code"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:text="Code"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:layout_toEndOf="@id/company_adapter_product_code"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/company_adapter_product_name"
+                        android:gravity="start"
+                        android:paddingHorizontal="10dp"
+                        android:text="Product Name"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/colorGrey500"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textColor="@color/colorGrey500"
+                        android:id="@+id/company_adapter_product_pack"
+                        android:layout_marginHorizontal="5dp"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:layout_toEndOf="@id/company_adapter_product_name"
+                        android:text="Pack"
+                        android:layout_centerVertical="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingHorizontal="5dp"
+                        android:paddingVertical="3dp"
+                        android:background="@drawable/form_gradient_grey_solid_teal"
+                        android:layout_below="@id/company_adapter_products_header"
+                        android:layout_marginBottom="20dp"
+                        android:scrollbars="vertical"
+                        android:id="@+id/product_list_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        />
+
+
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/no_products_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_list_holder"
+                    android:layout_toStartOf="@id/new_product_button"
+                    android:gravity="center"
+                    android:paddingVertical="5dp"
+                    android:text="No products are added yet!"
+                    android:textColor="@color/colorGrey400"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/new_product_button"
+                    style="@style/Widget.AppCompat.Button.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/product_list_holder"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/form_gradient_teal"
+                    android:elevation="8dp"
+                    android:paddingHorizontal="20dp"
+                    android:text="add"
+                    android:textColor="@color/colorTeal600"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

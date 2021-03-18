@@ -1,0 +1,102 @@
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTeal50">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customer_details_header"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/customer_adapter_business_name"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:gravity="center"
+                        android:text="customerBusinessName"
+                        android:textColor="@color/colorGrey600"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/customer_adapter_gstin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_toEndOf="@id/customer_adapter_business_name"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="Gstin Number"
+                        android:textColor="@color/colorGrey600"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:id="@+id/customer_info_layout"
+                android:visibility="visible"
+                android:layout_marginVertical="5dp"
+                android:layout_below="@id/customer_details_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/customer_adapter_owner"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrey500"
+                    android:textSize="13sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="customer owner name"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:textIsSelectable="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/customer_adapter_mobile"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/colorGrey500"
+                    android:textSize="13sp"
+                    android:text="mobile"
+                    android:layout_toEndOf="@id/customer_adapter_owner"
+                    android:paddingHorizontal="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

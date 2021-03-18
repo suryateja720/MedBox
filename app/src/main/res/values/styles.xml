@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorTeal900</item>
+        <item name="colorPrimaryDark">@color/colorTeal800</item>
+        <item name="colorAccent">@color/colorTeal100</item>
+    </style>
+
+
+    <!-- Activity Themes -->
+
+    <style name="SplashActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorTeal800</item>
+    </style>
+
+    <style name="NoInternetAlertActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorLightBlue800</item>
+    </style>
+
+    <style name="LoginActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorTeal900</item>
+    </style>
+
+    <style name="RegisterActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorLightBlue800</item>
+    </style>
+
+    <style name="UserDashboardActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+
+    </style>
+    <style name="NewCompanyActivityTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="dialogCornerRadius">8dp</item>
+    </style>
+    <!-- Widget Themes -->
+
+    <style name="NavigationDrawerTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorTeal50</item>
+    </style>
+    <style name="ErrorText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="HintText" parent="TextAppearance.AppCompat">
+        <item name="hintTextColor">@color/colorGrey600</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextLayoutAppearanceBlue" parent="Widget.Design.TextInputLayout">
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/colorGrey600</item>
+        <item name="android:textColorHint">@color/colorGrey500</item>
+        <item name="colorControlNormal">@color/colorGrey600</item>
+        <item name="colorControlActivated">@color/colorLightBlue300</item>
+        <item name="colorControlHighlight">@color/colorLightBlue300</item>
+    </style>
+
+    <style name="TextLayoutAppearanceGreen" parent="Widget.Design.TextInputLayout">
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="errorTextAppearance">@style/ErrorText</item>
+        <item name="android:textColor">@color/colorGrey600</item>
+        <item name="android:textColorHint">@color/colorGrey600</item>
+        <item name="colorControlNormal">@color/colorGrey600</item>
+        <item name="colorControlActivated">@color/colorTeal300</item>
+        <item name="colorControlHighlight">@color/colorTeal300</item>
+    </style>
+
+    <style name="CheckBoxTintBlue" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal">@color/colorGrey500</item>
+        <item name="colorControlActivated">@color/colorLightBlue300</item>
+        <item name="colorControlHighlight">@color/colorLightBlue300</item>
+    </style>
+
+    <style name="CheckBoxTintGreen" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlNormal">@color/colorGrey500</item>
+        <item name="colorControlActivated">@color/colorTeal300</item>
+        <item name="colorControlHighlight">@color/colorTeal300</item>
+    </style>
+
+    <style name="RadioTintBlue" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="colorControlNormal">@color/colorGrey500</item>
+        <item name="colorControlActivated">@color/colorLightBlue300</item>
+        <item name="colorControlHighlight">@color/colorLightBlue300</item>
+    </style>
+
+    <style name="RadioTintGreen" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="colorControlNormal">@color/colorGrey500</item>
+        <item name="colorControlActivated">@color/colorTeal300</item>
+        <item name="colorControlHighlight">@color/colorTeal300</item>
+    </style>
+
+    <style name="SwitchTint" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:colorControlActivated">@color/colorTeal200</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

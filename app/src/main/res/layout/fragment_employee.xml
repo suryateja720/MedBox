@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".users.distributor.fragments.EmployeeFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/employee_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:textColor="@color/colorTeal600"
+                    android:id="@+id/employee_active_text"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/form_gradient_teal"
+                    android:paddingVertical="5dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:gravity="center"
+                    android:text="Active"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:padding="10dp"
+                    android:background="@drawable/form_gradient_grey_solid_teal"
+                    android:scrollbarSize="1dp"
+                    android:visibility="visible"
+                    android:scrollbars="horizontal"
+                    android:layout_marginVertical="10dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_below="@id/employee_active_text"
+                    android:id="@+id/employee_active_list_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:visibility="visible"
+                    android:textColor="@color/colorGrey500"
+                    android:id="@+id/no_active_employee_text"
+                    android:layout_marginTop="50dp"
+                    android:layout_below="@id/employee_active_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="no employees are active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="@color/colorOrange500"
+                    android:id="@+id/employee_inactive_text"
+                    android:layout_marginVertical="10dp"
+                    android:background="@drawable/form_gradient_orange"
+                    android:paddingVertical="5dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:gravity="center"
+                    android:text="Inactive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:padding="10dp"
+                    android:background="@drawable/form_gradient_grey_solid_teal"
+
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="10dp"
+                    android:scrollbarSize="1dp"
+                    android:visibility="visible"
+                    android:scrollbars="horizontal"
+                    android:layout_below="@id/employee_inactive_text"
+                    android:id="@+id/employee_inactive_list_holder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:visibility="visible"
+                    android:textColor="@color/colorGrey500"
+                    android:id="@+id/no_inactive_employee_text"
+                    android:layout_marginTop="50dp"
+                    android:layout_below="@id/employee_inactive_text"
+                    android:layout_centerHorizontal="true"
+                    android:text="no employees are inactive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/new_employee_floating_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_add_green_24dp"
+        app:backgroundTint="@color/white"
+        app:elevation="7dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:textColor="@color/colorGrey500"
+        android:id="@+id/no_employees_text"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="No employees are added"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>

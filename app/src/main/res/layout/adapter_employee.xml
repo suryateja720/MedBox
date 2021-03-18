@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/employee_active_list_holder"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_below="@id/employee_active_text"
+    android:background="@color/colorTeal50">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:elevation="8dp"
+        android:fadingEdgeLength="10dp"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/adapter_employee_name"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingHorizontal="20dp"
+                android:text="Emp Name"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorGrey600"
+                android:textSize="13sp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/adapter_employee_mobile_icon"
+                android:layout_toEndOf="@id/adapter_employee_name"
+                android:src="@drawable/ic_call_teal_24dp"
+                android:layout_width="15dp"
+                android:layout_height="15dp"/>
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:textIsSelectable="true"
+                android:id="@+id/adapter_employee_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/adapter_employee_active_status"
+                android:layout_toEndOf="@id/adapter_employee_mobile_icon"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingHorizontal="20dp"
+                android:text="mobile number"
+                android:textColor="@color/colorGrey500"
+                android:textSize="12sp" />
+
+            <Switch
+                android:theme="@style/SwitchTint"
+                android:id="@+id/adapter_employee_active_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                 />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

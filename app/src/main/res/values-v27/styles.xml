@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SplashActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="NoInternetAlertActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorLightBlue800</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="LoginActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorTeal800</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="RegisterActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorLightBlue800</item>
+        <item name="android:navigationBarColor">@color/colorGrey50</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+    </style>
+
+    <style name="UserDashboardActivityTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorTeal600</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+</resources>

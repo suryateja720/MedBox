@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/new_employee_form_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/form_gradient_teal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_employee_title_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="30dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorGrey50"
+                android:fontFamily="@font/eagle_lake"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="New Employee"
+                android:textStyle="bold"
+                android:textColor="@color/colorTeal400"
+                android:textSize="20dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="30dp"
+            app:cardElevation="2dp"
+            android:layout_marginHorizontal="40dp"
+            android:id="@+id/new_product_basic_details"
+            android:layout_below="@id/new_employee_title_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/white"
+                android:fontFamily="@font/eagle_lake"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:text="Basic Details"
+                android:background="@color/colorTeal300"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_employee_name_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/new_product_basic_details"
+            android:layout_marginHorizontal="40dp"
+            android:background="@drawable/form_gradient_teal"
+            android:elevation="5dp"
+            android:paddingTop="2dp"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/colorTeal600">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_employee_name"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@android:color/transparent"
+                android:hint="Employee Name"
+                android:inputType="text"
+                android:textColor="@color/colorGrey600"
+                android:textSize="14sp"
+                android:theme="@style/TextLayoutAppearanceGreen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_employee_aadhaar_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/new_employee_name_text_layout"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/form_gradient_teal"
+            android:elevation="5dp"
+            android:paddingTop="2dp"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/colorTeal600">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_employee_aadhaar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@android:color/transparent"
+                android:hint="Aadhaar Number"
+                android:inputType="number"
+                android:maxLength="12"
+                android:textColor="@color/colorGrey600"
+                android:textSize="14sp"
+                android:theme="@style/TextLayoutAppearanceGreen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="2dp"
+            android:layout_marginHorizontal="40dp"
+            android:id="@+id/new_employee_contact"
+            android:layout_below="@id/new_employee_aadhaar_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/white"
+                android:fontFamily="@font/eagle_lake"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:text="Contacts"
+                android:background="@color/colorTeal300"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_employee_mobile_number_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/new_employee_contact"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/form_gradient_teal"
+            android:elevation="5dp"
+            android:paddingTop="2dp"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/colorTeal600">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_employee_mobile_number"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@android:color/transparent"
+                android:hint="Mobile"
+                android:inputType="number|phone"
+                android:textColor="@color/colorGrey600"
+                android:textSize="14sp"
+                android:theme="@style/TextLayoutAppearanceGreen" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/new_employee_address_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/new_employee_mobile_number_text_layout"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/form_gradient_teal"
+            android:elevation="5dp"
+            android:paddingTop="2dp"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:hintTextColor="@color/colorTeal600">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/new_employee_address"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@android:color/transparent"
+                android:hint="Address"
+                android:inputType="text"
+                android:textColor="@color/colorGrey600"
+                android:textSize="14sp"
+                android:theme="@style/TextLayoutAppearanceGreen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/new_employee_add_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_employee_address_text_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="30dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="3dp">
+
+            <Button
+                android:textSize="13sp"
+                android:alpha=".7"
+                android:id="@+id/new_employee_add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_theme_teal_solid"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:text="add employee"
+                android:textColor="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</RelativeLayout>

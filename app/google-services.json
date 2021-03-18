@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1003684038865",
+    "firebase_url": "https://med-box.firebaseio.com",
+    "project_id": "med-box",
+    "storage_bucket": "med-box.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003684038865:android:c4f16fdf8243c261b99df0",
+        "android_client_info": {
+          "package_name": "com.project.medbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003684038865-178rvbqiavpgefv6ki3fdaovdj1j7tpt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.medbox",
+            "certificate_hash": "a46dc19baebcaad30300f5626fb701a9c5d8fefb"
+          }
+        },
+        {
+          "client_id": "1003684038865-1kjlttv1uuti6l4gcugu5trr2f248po2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4yEEWEBMYyi9xJ-GWpMzBVw_Kn2jYICs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003684038865-1kjlttv1uuti6l4gcugu5trr2f248po2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

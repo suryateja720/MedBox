@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="distributor_main_menu" type="id" />
+    <item name="distributor_creation_menu" type="id" />
+    <item name="distributor_common_menu" type="id" />
+</resources>

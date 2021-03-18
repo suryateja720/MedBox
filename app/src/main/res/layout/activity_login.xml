@@ -1,0 +1,227 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_above="@id/log_in_scroll_view"
+        android:id="@+id/register_title_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:alpha=".7"
+            android:src="@drawable/med_box_icon"
+            android:layout_centerInParent="true"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/todo" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/log_in_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            tools:context=".ui.main.PlaceholderFragment">
+
+            <TextView
+                android:id="@+id/log_in_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/eagle_lake"
+                android:text="@string/login_to_medbox"
+                android:textColor="@color/colorTeal700"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_marginHorizontal="10dp"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/colorGrey500"
+                android:id="@+id/log_in_description"
+                android:layout_below="@id/log_in_title_text"
+                android:textSize="12sp"
+                android:text="@string/login_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <RelativeLayout
+                android:layout_marginVertical="10dp"
+                android:padding="10dp"
+                android:layout_below="@id/log_in_description"
+                android:id="@+id/login_form_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:elevation="5dp"
+                    android:id="@+id/log_in_user_id_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/form_gradient_teal"
+                    android:paddingTop="2dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTeal600">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/log_in_user_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:theme="@style/TextLayoutAppearanceGreen"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/user_id"
+                        android:inputType="text"
+                        android:textColor="@color/colorGrey600"
+                        android:textSize="14sp"
+                        tools:ignore="PrivateResource" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ProgressBar
+
+                    android:visibility="gone"
+                    android:id="@+id/log_in_user_id_progress"
+                    style="@android:style/Widget.Holo.Light.ProgressBar"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:elevation="5dp"
+                    android:id="@+id/log_in_password_text_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/log_in_user_id_text_layout"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/form_gradient_teal"
+                    android:paddingTop="2dp"
+                    app:hintAnimationEnabled="true"
+                    app:hintEnabled="true"
+                    app:hintTextColor="@color/colorTeal600">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/log_in_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorGrey600"
+                        android:textColorHint="@color/colorGrey600"
+                        android:textSize="14sp"
+                        tools:ignore="PrivateResource" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ProgressBar
+                    android:visibility="gone"
+                    android:layout_below="@id/log_in_user_id_text_layout"
+                    android:id="@+id/log_in_password_progress"
+                    style="@android:style/Widget.Holo.Light.ProgressBar"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.checkbox.MaterialCheckBox
+                    android:id="@+id/log_in_keep_me_logged_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/CheckBoxTintGreen"
+                    android:layout_below="@id/log_in_password_text_layout"
+                    android:layout_marginTop="20dp"
+                    android:textSize="12sp"
+                    android:paddingHorizontal="10dp"
+                    android:textColor="@color/colorGrey600"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:text="@string/keep_me_logged_in"
+                    android:layout_marginStart="5dp" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/log_in_login_button_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_form_container"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="5dp">
+
+                <Button
+                    android:id="@+id/log_in_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_theme_teal_solid"
+                    android:text="@string/log_in"
+                    android:textColor="@color/white" />
+
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_below="@id/log_in_login_button_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/log_in_forgot_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:padding="10dp"
+                    android:text="@string/forgot_your_password"
+                    android:textColor="@color/colorGrey600"
+                    android:textSize="13sp" />
+                <TextView
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/log_in_forgot_password"
+                    android:id="@+id/log_in_new_user_register_link"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorGrey600"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/new_to_med_box_register_here"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+    <RelativeLayout
+
+        android:layout_below="@id/log_in_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/fredericka_the_great"
+            android:text="@string/app_name"
+            android:textColor="@color/colorTeal700"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

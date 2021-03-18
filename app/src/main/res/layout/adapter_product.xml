@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTeal50"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:textColor="@color/colorGrey400"
+                android:textSize="13sp"
+                android:id="@+id/product_adapter_product_code"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginHorizontal="5dp"
+                android:text="code"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_toEndOf="@id/product_adapter_product_code"
+                android:layout_marginHorizontal="10dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/product_adapter_product_name"
+                android:gravity="start"
+                android:paddingHorizontal="10dp"
+                android:text="product name"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/colorGrey600"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/colorGrey600"
+                android:id="@+id/product_adapter_product_pack"
+                android:layout_marginHorizontal="5dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:layout_toEndOf="@id/product_adapter_product_name"
+                android:text="pack"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

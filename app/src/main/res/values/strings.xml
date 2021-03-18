@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Med Box</string>
+
+    <string name="todo">TODO</string>
+
+    <!--No Internet Activity Text -->
+    <string name="oh_no">Oh no !</string>
+    <string name="no_internet_alert_text_description">No internet connection.Check your connection and try again</string>
+    <string name="retry">retry</string>
+
+    <!--Login Activity Text-->
+    <string name="distributor">Distributor</string>
+    <string name="retailer">Retailer</string>
+    <string name="user_id">User ID</string>
+    <string name="password">Password</string>
+    <string name="keep_me_logged_in">keep me logged in</string>
+    <string name="log_in">log in</string>
+    <string name="login_to_medbox">Login to MedBox !</string>
+    <string name="login_description">Enter your UserID and Password to log into your account.</string>
+    <string name="i_am_a">I am a</string>
+    <string name="forgot_your_password">forgot your password?</string>
+    <string name="new_to_med_box_register_here">New to Med Box ! Register here</string>
+
+    <!--Register Activity Text-->
+    <string name="register_here">Register here</string>
+    <string name="register_description">Enter the credentials to create your medbox account.</string>
+    <string name="user_id_gstin">User ID - GSTIN</string>
+    <string name="gstin">GSTIN</string>
+    <string name="get_started">get started</string>
+    <string name="basic_details">Basic Details</string>
+    <string name="business_name">Business Name</string>
+    <string name="proprietor_owner_name">Proprietor/Owner Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="next">next</string>
+    <string name="back">back</string>
+    <string name="done">done</string>
+    <string name="register">register</string>
+    <string name="already_registered_login_here">Already registered ! login here</string>
+    <string name="by_clicking_this_you_agree_to_our_privacy_policy_and_terms_amp_conditions"><![CDATA[By clicking this , you agree to our Privacy Policy and Terms & Conditions.]]></string>
+    <string name="privacy_policy_and_terms_amp_conditions"><![CDATA[Privacy Policy and Terms & conditions]]></string>
+    <string name="resend_otp">re-send OTP</string>
+    <string name="send_otp">send OTP</string>
+    <string name="country_code">+91</string>
+    <string name="title_activity_user_dashboard">UserDashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Outward</string>
+    <string name="tab_text_2"> Inward </string>
+    <string name="tab_text_3">Current Stock</string>
+    <string name="tab_text_4">Expired Stock</string>
+    <array name="gst_list">
+        <item>GST</item>
+        <item>0</item>
+        <item>5</item>
+        <item>12</item>
+        <item>18</item>
+        <item>28</item>
+    </array>
+
+
+</resources>

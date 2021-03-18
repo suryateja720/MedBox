@@ -1,0 +1,693 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey50">
+
+
+    <ScrollView
+        android:id="@+id/register_scroll_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            tools:context=".ui.main.PlaceholderFragment">
+
+            <TextView
+                android:id="@+id/register_title_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/eagle_lake"
+                android:paddingHorizontal="10dp"
+                android:text="@string/register_here"
+                android:textColor="@color/colorLightBlue600"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/register_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_title_text"
+                android:lineSpacingExtra="5dp"
+                android:paddingHorizontal="10dp"
+                android:text="@string/register_description"
+                android:textColor="@color/colorGrey400"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/register_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_description"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/register_user_id_gstin_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/register_user_id_gstin_card_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorLightBlue400"
+                            android:elevation="6dp"
+                            android:fontFamily="@font/eagle_lake"
+                            android:gravity="center_horizontal"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="@string/user_id_gstin"
+                            android:textColor="@color/white" />
+
+                        <RelativeLayout
+                            android:id="@+id/register_user_id_gstin_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/register_user_id_gstin_card_text"
+                            android:layout_margin="10dp"
+                            android:visibility="visible">
+
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/register_gstin_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_user_type_container"
+                                android:layout_marginTop="10dp"
+                                android:hint="@string/gstin"
+                                android:paddingHorizontal="5dp"
+                                app:hintAnimationEnabled="true"
+                                app:hintEnabled="true"
+                                app:hintTextColor="@color/colorLightBlue600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/register_gstin_number"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text"
+                                    android:paddingHorizontal="5dp"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textSize="14sp"
+                                    android:theme="@style/TextLayoutAppearanceBlue" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/register_user_type_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="10dp">
+
+                                <TextView
+                                    android:id="@+id/user_type_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="10dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:text="@string/i_am_a"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textSize="14sp" />
+
+                                <RadioGroup
+                                    android:id="@+id/register_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/user_type_text"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/register_type_distributor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/distributor"
+                                        android:textColor="@color/colorGrey500"
+                                        android:textSize="14sp"
+                                        android:theme="@style/RadioTintBlue" />
+
+                                    <RadioButton
+                                        android:id="@+id/register_type_retailer"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/retailer"
+                                        android:textColor="@color/colorGrey500"
+                                        android:textSize="14sp"
+                                        android:theme="@style/RadioTintBlue" />
+
+                                </RadioGroup>
+                            </RelativeLayout>
+
+                            <com.google.android.material.checkbox.MaterialCheckBox
+                                android:id="@+id/gstin_check_box"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_gstin_container"
+                                android:layout_marginHorizontal="5dp"
+                                android:layout_marginTop="20dp"
+                                android:paddingHorizontal="5dp"
+                                android:text="@string/by_clicking_this_you_agree_to_our_privacy_policy_and_terms_amp_conditions"
+                                android:textColor="@color/colorGrey500"
+                                android:textSize="10sp"
+                                android:theme="@style/RadioTintBlue"
+                                tools:ignore="SmallSp" />
+
+                            <TextView
+                                android:id="@+id/privacy_policy_terms_conditions_link"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/gstin_check_box"
+                                android:layout_marginTop="20dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/privacy_policy_and_terms_amp_conditions"
+                                android:textColor="@color/colorLightBlue500"
+                                android:textSize="10sp" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/get_started_button_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/privacy_policy_terms_conditions_link"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="20dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/getting_started_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:drawableEnd="@drawable/ic_chevron_right_white_24dp"
+                                    android:elevation="1dp"
+                                    android:paddingStart="15dp"
+                                    android:text="@string/get_started"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/basic_details_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/register_user_id_gstin_card_view"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/basic_details_card_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorLightBlue400"
+                            android:elevation="3dp"
+                            android:fontFamily="@font/eagle_lake"
+                            android:gravity="center_horizontal"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="@string/basic_details"
+                            android:textColor="@color/white" />
+
+                        <RelativeLayout
+                            android:id="@+id/basic_details_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/basic_details_card_text"
+                            android:layout_margin="10dp"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/register_business_name_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                app:hintAnimationEnabled="true"
+                                app:hintEnabled="true"
+                                app:hintTextColor="@color/colorLightBlue600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/register_business_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/business_name"
+                                    android:inputType="text"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textSize="14sp"
+                                    android:theme="@style/TextLayoutAppearanceBlue" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/register_owner_name_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_business_name_container"
+                                android:padding="5dp"
+                                app:hintAnimationEnabled="true"
+                                app:hintEnabled="true"
+                                app:hintTextColor="@color/colorLightBlue600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/register_owner_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/proprietor_owner_name"
+                                    android:inputType="text"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textSize="14sp"
+                                    android:theme="@style/TextLayoutAppearanceBlue" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <LinearLayout
+                                android:id="@+id/password_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_owner_name_container"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/register_password_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+
+                                    app:hintAnimationEnabled="true"
+                                    app:hintEnabled="true"
+                                    app:hintTextColor="@color/colorLightBlue600">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/register_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/password"
+                                        android:inputType="textPassword"
+                                        android:textColor="@color/colorGrey500"
+                                        android:textSize="14sp"
+                                        android:theme="@style/TextLayoutAppearanceBlue" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/register_confirm_password_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    app:hintAnimationEnabled="true"
+                                    app:hintEnabled="true"
+                                    app:hintTextColor="@color/colorLightBlue600">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/register_confirm_password"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/confirm_password"
+                                        android:inputType="textPassword"
+                                        android:textColor="@color/colorGrey500"
+                                        android:textSize="14sp"
+                                        android:theme="@style/TextLayoutAppearanceBlue" />
+
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/next_to_contacts_button_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/password_container"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/next_to_contacts_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:drawableEnd="@drawable/ic_chevron_right_white_24dp"
+                                    android:elevation="1dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:text="@string/next"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/back_to_user_id_button_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/password_container"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/back_to_user_id_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:drawableStart="@drawable/ic_chevron_left_white_24dp"
+                                    android:elevation="1dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:text="@string/back"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/contact_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/basic_details_container"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/contact_card_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorLightBlue400"
+                            android:elevation="6dp"
+                            android:fontFamily="@font/eagle_lake"
+                            android:gravity="center_horizontal"
+                            android:paddingHorizontal="20dp"
+                            android:paddingVertical="10dp"
+                            android:text="Contacts"
+                            android:textColor="@color/white" />
+
+                        <RelativeLayout
+                            android:id="@+id/contact_card_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/contact_card_text"
+                            android:layout_margin="10dp"
+                            android:visibility="gone">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/register_email_id_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                app:hintAnimationEnabled="true"
+                                app:hintEnabled="true"
+                                app:hintTextColor="@color/colorLightBlue600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/register_email_id"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_check_white_24dp"
+                                    android:hint="Email ID (Optional)"
+                                    android:inputType="textEmailAddress"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textSize="14sp"
+                                    android:theme="@style/TextLayoutAppearanceBlue" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/register_mobile_layout"
+                                android:layout_below="@id/register_email_id_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/register_mobile_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_toStartOf="@id/register_edit_mobile"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    app:hintAnimationEnabled="true"
+                                    app:hintEnabled="true"
+                                    app:hintTextColor="@color/colorLightBlue600">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/register_mobile"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="Mobile Number"
+                                        android:inputType="phone"
+                                        android:textColor="@color/colorGrey500"
+                                        android:textSize="14sp"
+                                        android:theme="@style/TextLayoutAppearanceBlue" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                                <ImageView
+                                    android:visibility="gone"
+                                    android:id="@+id/register_edit_mobile"
+                                    android:layout_marginHorizontal="10dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_toStartOf="@id/register_send_otp"
+                                    android:src="@drawable/ic_edit_blue_24dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:visibility="visible"
+                                    android:padding="5dp"
+                                    android:id="@+id/register_send_otp"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/eagle_lake"
+                                    android:gravity="center"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="send OTP" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:elevation="4dp"
+                                android:background="@drawable/button_theme_light_blue"
+                                android:padding="10dp"
+                                android:visibility="gone"
+                                android:layout_below="@+id/register_mobile_layout"
+                                android:id="@+id/register_otp_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/register_opt_container"
+                                    android:layout_toStartOf="@id/register_otp_timer"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    app:hintAnimationEnabled="true"
+                                    app:hintEnabled="true"
+                                    app:hintTextColor="@color/colorLightBlue600">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/register_otp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:hint="verify OTP"
+                                        android:inputType="phone"
+                                        android:textColor="@color/colorGrey500"
+                                        android:textSize="14sp"
+                                        android:theme="@style/TextLayoutAppearanceBlue" />
+                                </com.google.android.material.textfield.TextInputLayout>
+                                <TextView
+                                    android:layout_marginHorizontal="10dp"
+                                    android:id="@+id/register_otp_timer"
+                                    android:layout_toStartOf="@id/register_verify_otp"
+                                    android:layout_centerVertical="true"
+                                    android:text="02:59"
+                                    android:textColor="@color/colorGrey500"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"/>
+                                <TextView
+                                    android:id="@+id/register_verify_otp"
+                                    android:padding="5dp"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/eagle_lake"
+                                    android:gravity="center"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="verify" />
+
+                            </RelativeLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/register_address_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_otp_layout"
+                                android:layout_marginBottom="10dp"
+                                android:padding="5dp"
+                                app:hintAnimationEnabled="true"
+                                app:hintEnabled="true"
+                                app:hintTextColor="@color/colorLightBlue600">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/register_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_check_white_24dp"
+                                    android:hint="Address"
+                                    android:inputType="textEmailAddress"
+                                    android:maxLines="4"
+                                    android:minLines="1"
+                                    android:textColor="@color/colorGrey500"
+                                    android:textSize="14sp"
+                                    android:theme="@style/TextLayoutAppearanceBlue" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/done_button_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_address_container"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/done_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:elevation="3dp"
+                                    android:text="@string/done"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/back_to_basic_details_button_container"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/register_address_container"
+                                android:layout_alignParentStart="true"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="5dp">
+
+                                <Button
+                                    android:id="@+id/back_to_basic_details_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_theme_light_blue_solid"
+                                    android:drawableStart="@drawable/ic_chevron_left_white_24dp"
+                                    android:elevation="3dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:text="@string/back"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/register_button_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_container"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginVertical="20dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="3dp">
+
+                <Button
+                    android:id="@+id/proceed_to_register_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_theme_light_blue"
+                    android:text="@string/register"
+                    android:textColor="@color/colorLightBlue400"
+                    android:visibility="gone" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/login_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/register_button_container"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="10dp"
+                android:text="@string/already_registered_login_here"
+                android:textColor="@color/colorGrey500"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_scroll_view"
+        android:layout_marginVertical="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/fredericka_the_great"
+            android:text="@string/app_name"
+            android:textColor="@color/colorLightBlue700"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
